@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controller => {registrations: 'registrations'} 
+  devise_for :users, :controller => {registrations: 'registrations'}
 
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'
@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   end
 
   root 'pages#community'
-
+  get '/home', to: 'pages#home'
   resources :users
 end
