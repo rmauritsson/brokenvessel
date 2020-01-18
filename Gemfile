@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'bootstrap'
 gem "font-awesome-rails"
+gem 'airtable'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
