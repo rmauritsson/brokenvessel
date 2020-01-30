@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get 'logout', to: 'devise/sessions#destroy'
   end
 
-  root 'pages#community'
-  get '/home', to: 'pages#home'
+  root 'pages#home'
+  get '/assignment', to: 'pages#assignment'
   resources :users
 end

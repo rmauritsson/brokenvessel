@@ -1,0 +1,47 @@
+<%= render 'shared/navbar'%>
+
+<div class="container community-landing">
+  <div class="row">
+    <div class="col-6">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">My Profile</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Listener Assigned</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Need Help?</a>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><strong> <%= current_user.fullname %> </strong></li>
+            <li> <%= current_user.email %> </li>
+            <li> <%= current_user.contact %></li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><strong> <%= current_user.fullname %> </strong></li>
+            <li> <%= current_user.email %> </li>
+            <li> <%= current_user.contact %></li>
+          </ul>
+        </div>
+
+        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+          Have some questions? Send us a message on <a href="#">Whatsapp</a>, <a href="#">Facebook</a> or DM us on <a href="#">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="wrapper">
+      <h4>Rules of Engagement</h4>
+      <p>Hooray, you have been assigned to a listener, These are some things to take note of</p>
+      <ul>
+        <li>They are volunteers, not employees of Broken Vessel, As much as they would like to be available to you immediately, they may have other engagements.</li>
+        <li><strong>WAIT FOR THEM OR THE ADMIN TO CONTACT YOU</strong>. However, if it's very urgent, go ahead and use the number given to contact them. Remember to introduce yourselve as a<span class="text-muted">broken Vessel</span></li>
+        <li>Our Volunteers agree to Non-Disclosure Agreements to protect your privacy, respect theirs too</li>
+        <li>Get Well soon, If you have questions, reach out to the Admin.</li>
+      </ul>
+    </div>
+  </div>
+</div>
