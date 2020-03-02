@@ -4,7 +4,6 @@ require:
   - rubocop-rails
   - rubocop-rspec
   - rubocop-performance
-  - rubocop-faker
 
 
 Style/Documentation:
@@ -16,15 +15,6 @@ Style/FrozenStringLiteralComment:
 Style/StringLiterals:
   EnforcedStyle: single_quotes
   Enabled: true
-
-Style/HashEachMethods:
-  Enabled: false
-
-Style/HashTransformKeys:
-  Enabled: false
-
-Style/HashTransformValues:
-  Enabled: false
 
 RSpec/NestedGroups:
   Max: 4
