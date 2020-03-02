@@ -38,6 +38,17 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'rspec-rails', '~> 4.0.0.beta4'
+  gem 'pry-byebug', '~> 3.8'
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'faker', '~> 2.10', '>= 2.10.2'
+  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'shoulda-matchers', '~> 4.3'
+  gem 'rubocop-rspec', '~> 1.38', '>= 1.38.1'
+  gem 'rubocop-performance', '~> 1.5', '>= 1.5.2'
+  gem 'rubocop-rails', '~> 2.4', '>= 2.4.2'
+  gem 'rubocop-faker', '~> 0.2.0'
 end
 
 group :development do
