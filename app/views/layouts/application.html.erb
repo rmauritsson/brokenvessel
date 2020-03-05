@@ -5,18 +5,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
-    
+
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-      <%= yield %>
+    <%= render partial: "shared/navbar"%>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 pt-4">
+          <%= render partial: "shared/flash_messages"%>
+
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
