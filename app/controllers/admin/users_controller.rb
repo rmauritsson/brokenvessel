@@ -23,7 +23,14 @@ class Admin::UsersController < Admin::ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    if @user.update(admin_user_params)
+      redirect_to admin_users_path, notice: 'User has been updated'
+    else
+      flash.now[:alert] = 'User could not be updated'
+      render :edit
+    end
+  end
 
   private
 
