@@ -24,6 +24,8 @@ class Admin::UsersController < Admin::ApplicationController
   def edit; end
 
   def update
+    params[:user].delete(:password) if params[:user][:password].blank?
+
     if @user.update(admin_user_params)
       redirect_to admin_users_path, notice: 'User has been updated'
     else
