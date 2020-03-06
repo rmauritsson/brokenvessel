@@ -29,7 +29,7 @@
           <%= link_to "Archive", archive_admin_user_path(@user),
                                 method: :patch,
                                 data: { confirm: 'Are you sure you want to archive this user?' },
-                                class: 'btn btn-danger'%>
+                                class: "btn btn-danger #{@user.archived_at.nil? ? "active" : "disabled"}"%>
           </td>
         </tr>
       </tbody>
