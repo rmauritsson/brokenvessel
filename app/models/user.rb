@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :username, :fullname, :contact, :email, presence: true
+
+  def archive
+    update(archived_at: Time.current)
+  end
 end
