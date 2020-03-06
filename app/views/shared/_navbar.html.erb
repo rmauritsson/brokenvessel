@@ -2,7 +2,9 @@
   <div class="navbar-left">
     <ul class="custom-navbar-left">
       <li><%= image_tag ("bv-logo.png"), id: "logo"%></li>
-      <li class="pl-4"><%= link_to "View Admin Portal", admin_users_path, class: "btn btn-outline-primary"%></li>
+      <% if current_user.try(:admin?) %>
+        <li class="pl-4"><%= link_to "View Admin Portal", admin_users_path, class: "btn btn-outline-primary"%></li>
+      <% end %>
     </ul>
   </div>
 
