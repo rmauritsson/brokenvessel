@@ -24,5 +24,19 @@ Metrics/BlockLength:
     - '**/*.gemspec'
     - 'spec/**/**'
 
+Rails/FilePath:
+  Exclude:
+    - 'spec/**'
+    - 'config/**/**'
+
 RSpec/MultipleExpectations:
-  Max: 2
+  Max: 3
+
+# using let! in my opinion makes the code more readable especially
+# in system tests.
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/system/**/**'

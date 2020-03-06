@@ -3,13 +3,13 @@ require 'rails_helper'
 RSpec.describe 'Admin::CreateUsers', type: :system do
   let(:admin) { create(:user, :admin) }
 
-  before do
-    sign_in(admin)
-
-    visit '/'
-  end
-
   context 'when logged in as an admin' do
+    before do
+      sign_in(admin)
+
+      visit '/'
+    end
+
     it 'can create an admin user' do
       click_link 'View Admin Portal'
       expect(page).to have_text('All Users')
