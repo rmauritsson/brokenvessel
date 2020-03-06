@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controller => {registrations: 'registrations'}
+  devise_for :users, controller: { registrations: 'registrations' }
 
   devise_scope :user do
     get 'login', to: 'devise/sessions#new'
@@ -9,5 +9,14 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/assignment', to: 'pages#assignment'
-  resources :users
+
+  namespace :admin do
+    root 'application#index'
+
+    resources :users do
+      member do
+        patch :archive
+      end
+    end
+  end
 end

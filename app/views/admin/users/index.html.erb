@@ -1,0 +1,29 @@
+<div class="row mb-3">
+  <div class="col-sm-8">
+    <%= link_to "Create New User", new_admin_user_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8 mt-3">
+    <p class="h5"> All Users </p>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Admin?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user|%>
+          <tr>
+            <td><%= link_to user.fullname, admin_user_path(user) %></td>
+            <td> <%= user.username %></td>
+            <td> <%= user.admin? ? "Yes" : "No" %> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

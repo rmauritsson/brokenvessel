@@ -1,0 +1,38 @@
+<div class="col-sm-12">
+    <%= form_for([:admin, user], html: { class: "card p-4" }) do |f|%>
+      <div class="form-group">
+        <%= f.label :fullname, "Full Name" %>
+        <%= f.text_field :fullname, { autofocus: true, class: "form-control", required: true}%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :username %>
+        <%= f.text_field :username, { autofocus: true, class: "form-control",required: true }%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.email_field :email, { autofocus: true, class: "form-control", required: true }%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :contact, "Phone Number" %>
+        <%= f.phone_field :contact, { autofocus: true, required: true, class: "form-control"} %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password%>
+        <%= f.password_field :password,  { autofocus: true, class: "form-control"} %>
+      </div>
+
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <span> <%= f.check_box :admin %> Admin? </span>
+          <span class="m-3"></span>
+          <span <%= f.check_box :listener %> Listener? </span>
+        </div>
+      </div>
+
+      <%= f.submit class: "btn btn-primary"%>
+    <% end %>
+</div>
