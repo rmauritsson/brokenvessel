@@ -1,22 +1,60 @@
 @import 'bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+
+*,
+*::before,
+*::before{
+  box-sizing: border-box;
+}
+/********* Custom Properties ******/
+:root{
+  --ff-primary: 'Montserrat';
+
+  --fw-reg: 400;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #232a34;
+  --clr-accent: #0075cb;
+
+  --fs-h1:3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--ff-primary);
 }
-html {
-  height: 100%;
+
+@media (min-width: 800px) {
+  :root{
+    --fs-h1:4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
+  }
 }
-body {
-  position: relative;
-  min-height: 100%;
+
+/********** typography*******/
+h1,
+h2,
+h3{
+  line-height: 1.1;
+  margin: 0;
 }
-.padding-bottom {
-  padding-bottom: 50px;
-}
+h1 { font-size: var(--fs-h1)}
+h2 { font-size: var(--fs-h2)}
+h3 { font-size: var(--fs-h3)}
+
+/********** End of Typography*******/
+
 /******************** SIGN IN AND SIGN UP PAGE CSS***********************/
 .landing-logo {
   width: 30%;
@@ -89,6 +127,40 @@ body {
   padding: 30px 10px;
 }
 /****************** End of Landing Page CSS***********************/
+
+/********* general designs ******/
+nav{
+  background: var(--clr-dark);
+  color: var(--clr-light);
+}
+.nav-link{
+  color: var(--clr-light);
+}
+.navbar-brand{
+  font-weight: var(--fw-bold)
+}
+.nav-button{
+  margin: 0 .3em;
+}
+.btn{
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: var(--fw-reg);
+}
+
+/* Change the color in the stroke property of the hamburger */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#0075cb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  border-color: var(--clr-accent)
+}
+
+/* End*/
+:focus{
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
 
 /************************MAIN PAGE CSS*******************/
 #logo {
