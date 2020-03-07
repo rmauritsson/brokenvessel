@@ -155,6 +155,18 @@ nav{
 .navbar-toggler {
   border-color: var(--clr-accent)
 }
+.bg-dark{
+  color: var(--clr-light);
+}
+.table th{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.table td{
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 /* End*/
 
 /************************MAIN PAGE CSS*******************/
