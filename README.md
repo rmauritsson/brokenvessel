@@ -19,15 +19,15 @@
 
 👤 **LEONARD RWAI KANYESIGYE**
 
-- Github: [@githubhandle](https://github.com/rmauriutsson)
-- Twitter: [@twitterhandle](https://twitter.com/leokanye)
-- Linkedin: [linkedin](https://linkedin.com/in/leonard-rwai-kanyesigye)
+- Github: [@rmauritsson](https://github.com/rmauritsson)
+- Twitter: [@leokanye](https://twitter.com/leokanye)
+- Linkedin: [leonard-rwai-kanyesigye](https://linkedin.com/in/leonard-rwai-kanyesigye)
 
 👤 **EDGAR KANYESIGYE**
 
-- Github: [@githubhandle](https://github.com/isheebo)
-- Twitter: [@twitterhandle](https://twitter.com/the_kanyesigye)
-- Linkedin: [linkedin](https://linkedin.com/in/kanyesigye-edgar-a560b969/)
+- Github: [@isheebo](https://github.com/isheebo)
+- Twitter: [@the_kanyesigye](https://twitter.com/the_kanyesigye)
+- Linkedin: [kanyesigye-edgar-a560b969/](https://linkedin.com/in/kanyesigye-edgar-a560b969/)
 
 ## 🤝 Contributing
 
