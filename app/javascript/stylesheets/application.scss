@@ -1,0 +1,239 @@
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+
+*,
+*::before,
+*::before{
+  box-sizing: border-box;
+}
+/********* Custom Properties ******/
+:root{
+  --ff-primary: 'Montserrat';
+
+  --fw-reg: 400;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #232a34;
+  --clr-accent: #0075cb;
+
+  --fs-h1:3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-primary);
+}
+
+@media (min-width: 800px) {
+  :root{
+    --fs-h1:4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.25rem;
+  }
+}
+
+/********** typography*******/
+h1,
+h2,
+h3{
+  line-height: 1.1;
+  margin: 0;
+}
+h1 { font-size: var(--fs-h1)}
+h2 { font-size: var(--fs-h2)}
+h3 { font-size: var(--fs-h3)}
+
+/********** End of Typography*******/
+
+/******************** SIGN IN AND SIGN UP PAGE CSS***********************/
+.landing-logo {
+  width: 30%;
+}
+.featurette-heading {
+  font-weight: 700;
+  padding: 10px 0;
+}
+.featurette-heading h2 {
+  color: #6c757d;
+}
+.text-colored {
+  color: #007bff;
+}
+.signin-wrapper {
+  width: 80%;
+  margin: auto;
+}
+.sidebar ul li {
+  padding: 10px 0;
+}
+.privacy-warning {
+  display: none;
+  font-size: 12px;
+}
+.icon-bar {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+#custom-nav {
+  -webkit-box-shadow: 1.5px 1.5px 1.5px grey;
+  -moz-box-shadow: 1.5px 1.5px 1.5px grey;
+  box-shadow: 1.5px 1.5px 1.5px grey;
+
+  .custom-navbar-left {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+    }
+  }
+}
+/***********************End of AUTHENTICATION CSS********************/
+
+/*************** Landing Page******************/
+#landing-img {
+  width: 95%;
+  height: 95%;
+}
+.center img {
+  margin: auto;
+  padding-top: 90px;
+}
+.welcome {
+  padding-top: 90px;
+}
+.welcome-2 {
+  padding-top: 90px;
+}
+.welcome-3 {
+  padding-top: 20px;
+}
+.welcome div {
+  padding: 10px;
+}
+.wrapper {
+  padding: 30px 10px;
+}
+/****************** End of Landing Page CSS***********************/
+
+/********* general designs ******/
+nav{
+  background: var(--clr-dark);
+  color: var(--clr-light);
+}
+.nav-link{
+  color: var(--clr-light);
+}
+.navbar-brand{
+  font-weight: var(--fw-bold)
+}
+.nav-button{
+  margin: 0 .3em;
+}
+.btn{
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: var(--fw-reg);
+}
+
+/* Change the color in the stroke property of the hamburger */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#0075cb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler {
+  border-color: var(--clr-accent)
+}
+.bg-dark{
+  color: var(--clr-light);
+}
+.table th{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.table td{
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* End*/
+
+/************************MAIN PAGE CSS*******************/
+#logo {
+  height: 30px;
+}
+.community-landing {
+  padding-top: 30px;
+}
+/*******************************************/
+/************ footer CSS ************/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.footer a {
+  color: #222;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  opacity: 1;
+}
+
+/************ MEDIA QUERIES ************/
+/* Portrait */
+
+@media (max-device-width: 375px) {
+  .center img {
+    margin: auto;
+    padding-top: 30px;
+  }
+  .welcome {
+    padding-top: 0;
+  }
+  .hidden-xs-down {
+    display: none !important;
+  }
+  .privacy-warning {
+    display: inline;
+    font-size: 12px;
+  }
+}
+
+@media (max-device-width: 320px) {
+  .center img {
+    margin: auto;
+    padding-top: 20px;
+  }
+  .welcome {
+    padding-top: 10px;
+  }
+  .hidden-xs-down {
+    display: none !important;
+  }
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}

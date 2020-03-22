@@ -1,0 +1,38 @@
+<div class="col-sm-12">
+  <div class="row">
+    <header>
+      <h3> User Details </h3>
+    </header>
+  </div>
+
+  <div class="row mt-10">
+    <table class="table table-hover table-responsive">
+      <thead>
+        <tr>
+          <th class="bg-dark">Name</th>
+          <th class="bg-dark">Username</th>
+          <th class="bg-dark"> Phone </th>
+          <th class="bg-dark">Admin?</th>
+          <th class="bg-dark"> Listener? </th>
+          <th colspan="3" class="bg-dark"> Actions </th>
+        <tr>
+      <thead>
+      <tbody>
+        <tr>
+          <td> <%= @user.fullname%></td>
+          <td> <%= @user.username%></td>
+          <td> <%= @user.contact%> </td>
+          <td> <%= @user.admin? ? "Yes" : "No" %></td>
+          <td> <%= @user.listener? ? "Yes" : "No"  %></td>
+          <td> <%= link_to "Edit", edit_admin_user_path(@user), class: 'btn btn-primary' %> </td>
+          <td >
+          <%= link_to "Archive", archive_admin_user_path(@user),
+                                method: :patch,
+                                data: { confirm: 'Are you sure you want to archive this user?' },
+                                class: "btn btn-danger #{@user.archived_at.nil? ? "active" : "disabled"}"%>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

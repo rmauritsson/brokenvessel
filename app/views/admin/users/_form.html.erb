@@ -1,0 +1,65 @@
+<div class="col-sm-12">
+    <%= form_for([:admin, user], html: { class: "card p-5" }) do |f|%>
+    <div class="form-group row">
+      <%= f.label :fullname, "Full Name", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-8">
+        <%= f.text_field :fullname, { autofocus: true, class: "form-control", placeholder:"Full name", required: true}%>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :username, "Username", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-8">
+        <%= f.text_field :username, { autofocus: true, class: "form-control", placeholder:"Username", required: true}%>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :email, "Email", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-8">
+        <%= f.email_field :email, { autofocus: true, class: "form-control", placeholder:"Email", required: true}%>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :contact, "Phone Number", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-8">
+        <%= f.phone_field :contact, { autofocus: true, class: "form-control", placeholder:"Phone Number", required: true}%>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <%= f.label :password, "Password", class: "col-sm-2 col-form-label" %>
+      <div class="col-sm-8">
+        <%= f.password_field :password, { autofocus: true, class: "form-control", placeholder:"Password", required: true}%>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <span> <%= f.check_box :admin %> Admin? </span>
+          <span class="m-3"></span>
+          <span <%= f.check_box :listener %> Listener? </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
+          <%= f.submit class: "btn btn-primary"%>
+      </div>
+    </div>
+
+    <% end %>
+</div>
+
+<form>
+
+
+
+
+
+</form>

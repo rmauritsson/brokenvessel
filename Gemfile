@@ -19,9 +19,15 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+
+# Airtable client to make Airtable interactions a breeze
+gem 'airrecord', '~> 1.0', '>= 1.0.4'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'figaro'
+gem 'devise'
+gem 'bootstrap'
+gem "font-awesome-rails"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -32,6 +38,16 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'rspec-rails', '~> 4.0.0.beta4'
+  gem 'pry-byebug', '~> 3.8'
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'faker', '~> 2.10', '>= 2.10.2'
+  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'shoulda-matchers', '~> 4.3'
+  gem 'rubocop-rspec', '~> 1.38', '>= 1.38.1'
+  gem 'rubocop-performance', '~> 1.5', '>= 1.5.2'
+  gem 'rubocop-rails', '~> 2.4', '>= 2.4.2'
 end
 
 group :development do
@@ -44,11 +60,8 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  gem 'capybara', '~> 3.31'
+  gem 'selenium-webdriver', '~> 3.142', '>= 3.142.7'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,24 +1,44 @@
-# README
+# Broken Vessel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Broken Vessel is an NGO creating mental awareness and taking care of the depressed. This app enables users to be able to be assigned volunteer listeners
 
-Things you may want to cover:
+![screenshot](./app_screenshot.png)
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby,
+- Ruby on Rails,
+- Bootstrap
 
-* Configuration
+## Live Demo
 
-* Database creation
+[Live Demo Link](http://brokenvessel.herokuapp.com/)
 
-* Database initialization
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **LEONARD RWAI KANYESIGYE**
 
-* Deployment instructions
+- Github: [@githubhandle](https://github.com/rmauriutsson)
+- Twitter: [@twitterhandle](https://twitter.com/leokanye)
+- Linkedin: [linkedin](https://linkedin.com/in/leonard-rwai-kanyesigye)
 
-* ...
+👤 **EDGAR KANYESIGYE**
+
+- Github: [@githubhandle](https://github.com/isheebo)
+- Twitter: [@twitterhandle](https://twitter.com/the_kanyesigye)
+- Linkedin: [linkedin](https://linkedin.com/in/kanyesigye-edgar-a560b969/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.
